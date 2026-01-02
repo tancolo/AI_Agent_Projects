@@ -1,0 +1,58 @@
+
+"创建一个Python项目，我需要抓取目标网站 https://blog.csdn.net/shrimpcolo?type=blog 上我(@shrimpcolo)名下的所有blog的标题、发布日期、阅读次数、点赞、评论、收藏、每个blog文章对应的的网页链接、以及blog属于哪个专栏。
+
+1. 请先规划任务。
+
+2. 使用 Playwright 或 BeautifulSoup 或其他成熟的工具进行抓取（请选择最适合该网站的方式）。
+
+3. 将抓取的数据按照blog发布时间先后顺序，保存到 articles_data.csv。
+
+4. 请一步步执行，并在遇到反爬虫机制时尝试解决。"
+
+===>
+
+Create a Python web scraping project.
+Target URL: https://blog.csdn.net/shrimpcolo?type=blog
+Objective: Scrape metadata for ALL blog posts by user "@shrimpcolo".
+
+Data Fields to Extract:
+1. Title
+2. Publish Date
+3. View Count
+4. Like Count
+5. Comment Count
+6. Bookmark/Favorite Count
+7. Article URL
+8. Column/Series Name
+
+Execution Plan:
+1. Analyze the Page: First, analyze the page structure. Note that CSDN often uses dynamic rendering or infinite scrolling to load article lists.
+2. Tooling: Use **Playwright** (recommended for handling dynamic content) or requests + BeautifulSoup if the data is available in the static HTML source.
+3. Resilience: Implement handling for anti-scraping mechanisms (e.g., set a realistic User-Agent, implement random delays between requests). Handle pagination or scroll-to-load logic to ensure all articles are captured.
+4. Output: Process the data and save it to `articles_data.csv`. Ensure the data is sorted by Publish Date (oldest to newest).
+5. Iterate: Start by scraping the first page to verify the selectors, then expand to scrape all available data.
+
+
+
+====Prompt for jianshu====
+Another task,to scraper other blogs on other website (https://www.jianshu.com/u/d614825bc8a1), the author is@檀木丁, the goal is the same,
+Data Fields to Extract:
+1. Title
+2. Publish Date
+3. View Count
+4. Like Count
+5. Comment Count
+6. Bookmark/Favorite Count
+7. Article URL
+8. Column/Series Name
+
+I think it is the same as the previous task, maybe we can use th same method to scrape the date on website jianshu, 
+please try it and let me know if you have any issues.
+
+Note: please create new files for this task, and name them as jianshu_scraper.py, jianshu_articles_data.csv, all file add "jianshu_"
+
+
+====Prompt for juejin====
+Another task,to scraper other blogs on other website (https://juejin.cn/user/345669300651932/posts), the author is@会飞的虾, the goal is the same with jianshu
+
+Note: please create new files for this task, and name them as juejin_scraper.py, juejin_articles_data.csv, all file add "juejin_"

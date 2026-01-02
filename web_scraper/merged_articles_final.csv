@@ -1,0 +1,77 @@
+Title,Publish Date,View Count,Like Count,Comment Count,Bookmark Count,Article URL,Column Name,Source,Title En,Column Name En
+Android L Phone进程初始化_01,2015-02-12,5678,0,1,12,https://blog.csdn.net/shrimpcolo/article/details/43766579,Android 5.0,CSDN,Android L Phone process initialization_01,Android 5.0
+如何解决Phone模块bug,2015-07-04,1726,0,0,1,https://blog.csdn.net/shrimpcolo/article/details/46755325,Android 5.0,CSDN,How to solve Phone module bug,Android 5.0
+Android L Telecom进程初始化之目录分析,2015-03-14,5431,0,1,2,https://blog.csdn.net/shrimpcolo/article/details/44257655,Android 5.0,CSDN,Directory analysis of Android L Telecom process initialization,Android 5.0
+Android L Phone进程初始化_02,2015-02-26,3163,0,1,4,https://blog.csdn.net/shrimpcolo/article/details/43951989,Android 5.0,CSDN,Android L Phone process initialization_02,Android 5.0
+Android L Phone的目录结构与进程模型,2015-01-31,3097,0,0,2,https://blog.csdn.net/shrimpcolo/article/details/43341775,Android 5.0,CSDN,Directory structure and process model of Android L Phone,Android 5.0
+Android Lollipop Phone模块学习计划,2015-01-30,1581,0,0,1,https://blog.csdn.net/shrimpcolo/article/details/43313281,Android 5.0,CSDN,Android Lollipop Phone module learning plan,Android 5.0
+Google ZXing系列讲解(二)——生成WIFi二维码,2017-02-22,3491,0,0,3,https://blog.csdn.net/shrimpcolo/article/details/56494504,Android App,CSDN,Google ZXing series explanation (2) - Generating WIFi QR code,Android App
+Google ZXing系列讲解(五)——ZXing 仿微信扫描UI,2017-03-02,1662,1,0,4,https://blog.csdn.net/shrimpcolo/article/details/59484615,Android App,CSDN,Google ZXing series explanation (5) - ZXing imitates WeChat scanning UI,Android App
+实现Gmail邮箱翻转效果之开篇,2016-01-07,2696,0,0,0,https://blog.csdn.net/shrimpcolo/article/details/50468712,Android App,CSDN,The beginning of realizing the Gmail mailbox flipping effect,Android App
+实现Gmail邮箱翻转效果之翻转动画,2016-01-07,1557,0,0,0,https://blog.csdn.net/shrimpcolo/article/details/50409071,Android App,CSDN,Flip animation to achieve Gmail mailbox flip effect,Android App
+Facebook SDK集成之纲要篇,2015-12-15,1090,0,0,1,https://blog.csdn.net/shrimpcolo/article/details/50310607,Android App,CSDN,Facebook SDK integration outline,Android App
+PersistableBundle引发的血案,2017-11-12,3507,0,0,0,https://blog.csdn.net/shrimpcolo/article/details/78504863,Android App,CSDN,The murder caused by PersistableBundle,Android App
+Facebook SDK集成之分享篇,2015-12-15,3590,0,0,1,https://blog.csdn.net/shrimpcolo/article/details/50316525,Android App,CSDN,Sharing of Facebook SDK integration,Android App
+Facebook SDK集成之登录篇,2015-12-15,4084,1,3,1,https://blog.csdn.net/shrimpcolo/article/details/50315905,Android App,CSDN,Facebook SDK integration login chapter,Android App
+RecyclerView的重构之路汇总,2017-02-05,770,0,0,0,https://blog.csdn.net/shrimpcolo/article/details/54880948,Android App,CSDN,Summary of the road to reconstruction of RecyclerView,Android App
+Facebook SDK集成之准备篇,2015-12-15,3103,0,0,0,https://blog.csdn.net/shrimpcolo/article/details/50313995,Android App,CSDN,Preparation for Facebook SDK integration,Android App
+Android Studio集成Facebook SDK,2015-10-15,2511,0,0,0,https://blog.csdn.net/shrimpcolo/article/details/49153289,Android App,CSDN,Android Studio Collection Facebook SDK,Android App
+ListView中隐藏输入法键盘,2015-07-04,1540,0,0,1,https://blog.csdn.net/shrimpcolo/article/details/46756679,Android App,CSDN,Hide input method keyboard in ListView,Android App
+Android Studio集成Facebook SDK Sample,2015-10-15,4129,0,0,2,https://blog.csdn.net/shrimpcolo/article/details/49150829,Android App,CSDN,Android Studio Collection Facebook SDK Sample,Android App
+实现自定义对话框中的属性动画,2015-08-02,1320,0,0,0,https://blog.csdn.net/shrimpcolo/article/details/47219135,Android App,CSDN,Implement property animation in custom dialog boxes,Android App
+实现自定义对话框中的属性动画-续,2015-08-12,935,0,0,0,https://blog.csdn.net/shrimpcolo/article/details/47429931,Android App,CSDN,Implement property animation in custom dialog boxes-continued,Android App
+如何获取视频路径,2015-08-22,7312,0,0,2,https://blog.csdn.net/shrimpcolo/article/details/47787491,Android App,CSDN,How to get the video path,Android App
+实现Gmail邮箱翻转效果之ActionBar,2016-01-07,934,0,0,0,https://blog.csdn.net/shrimpcolo/article/details/50474333,Android App,CSDN,ActionBar to achieve Gmail mailbox flipping effect,Android App
+AS导入源码卡在Gradle构建界面,2015-10-29,1836,0,0,0,https://blog.csdn.net/shrimpcolo/article/details/49498965,Android Studio,CSDN,AS import source code is stuck in Gradle build interface,Android Studio
+Android Studio无法显示Layout预览,2015-08-27,16818,1,0,1,https://blog.csdn.net/shrimpcolo/article/details/48028591,Android Studio,CSDN,Android Studio cannot display Layout preview,Android Studio
+RecyclerView的重构之路(一),2016-07-20,4241,7,1,0,https://www.jianshu.com/p/99cd83778373,Android开发,Jianshu,The road to reconstruction of RecyclerView (1),Android development
+RecyclerView的重构之路(二),2016-07-21,4390,1,0,0,https://www.jianshu.com/p/81270f444a6f,Android开发,Jianshu,The road to reconstruction of RecyclerView (2),Android development
+RecyclerView的重构之路(四),2016-07-22,4490,1,0,0,https://www.jianshu.com/p/5eac09f5bb92,Android开发,Jianshu,The road to reconstruction of RecyclerView (4),Android development
+RecyclerView的重构之路(五),2016-07-26,5399,24,2,0,https://www.jianshu.com/p/c4a8bfbe1f40,Android开发,Jianshu,The road to reconstruction of RecyclerView (5),Android development
+RecyclerView的重构之路(六),2016-07-27,4786,2,0,0,https://www.jianshu.com/p/b1ea462f5602,Android开发,Jianshu,The road to reconstruction of RecyclerView (6),Android development
+RecyclerView的重构之路(七),2016-07-28,4390,3,0,0,https://www.jianshu.com/p/9665955103c0,Android开发,Jianshu,The road to reconstruction of RecyclerView (7),Android development
+RecyclerView的重构之路(八),2016-07-29,4647,2,1,0,https://www.jianshu.com/p/98399b00ae78,Android开发,Jianshu,The road to reconstruction of RecyclerView (8),Android development
+又一个寡头时代的来临,2016-08-01,2383,0,0,0,https://www.jianshu.com/p/e9f4736fa08a,随笔,Jianshu,Another era of oligarchs is coming,Essay
+乔布斯图片,2016-09-18,3959,2,0,0,https://www.jianshu.com/p/370d32cce94f,前端开发,Jianshu,Jobs pictures,Front-end development
+ng2英雄指南相关问题,2016-10-27,4590,2,0,0,https://www.jianshu.com/p/9bd75adaed6f,前端开发,Jianshu,ng2 hero guide related questions,Front-end development
+TypeScript笔记之基础类型,2016-10-29,5319,2,0,0,https://www.jianshu.com/p/5db14e3b9b71,前端开发,Jianshu,Basic types of TypeScript notes,Front-end development
+windows修改npm npm-cache路径,2016-10-30,11378,1,0,0,https://www.jianshu.com/p/4da509245933,前端开发,Jianshu,windows modify npm npm-cache path,Front-end development
+Angular2开发基础之TSC编译,2016-11-01,13419,8,2,0,https://www.jianshu.com/p/b12ccfdfb0c1,前端开发,Jianshu,TSC compilation based on Angular2 development,Front-end development
+Angular2开发基础之Webpack,2016-11-01,10911,3,2,0,https://www.jianshu.com/p/4b4264f045b7,前端开发,Jianshu,"Webpack, the basis of Angular2 development",Front-end development
+webpack打包ng2 英雄指南,2016-11-03,7974,2,1,0,https://www.jianshu.com/p/f5a21f18cfae,前端开发,Jianshu,Webpack packaging ng2 hero guide,Front-end development
+如何优雅升级ng2项目,2016-11-17,8232,1,0,0,https://www.jianshu.com/p/b583e6bc6139,前端开发,Jianshu,How to upgrade ng2 project gracefully,Front-end development
+Webpack打包 ng2英雄指南,2016-11-03,4720,0,0,2,https://blog.csdn.net/shrimpcolo/article/details/53020791,前端探索,CSDN,Webpack packaging ng2 hero guide,Front-end exploration
+函数编程实践记(3)——完美数,2017-04-19,1614,0,0,0,https://blog.csdn.net/shrimpcolo/article/details/70147737,函数式用心学,CSDN,Functional Programming Practice Notes (3) - Perfect Numbers,Functional Mindfulness
+函数式编程实践记(1)——统计单词频率,2017-04-10,1530,0,1,2,https://blog.csdn.net/shrimpcolo/article/details/70037736,函数式用心学,CSDN,Functional programming practice notes (1) - counting word frequency,Functional Mindfulness
+函数编程实践记——总纲,2017-04-10,636,0,0,0,https://blog.csdn.net/shrimpcolo/article/details/70036926,函数式用心学,CSDN,Functional Programming Practice - General Outline,Functional Mindfulness
+git clone几种可选参数的使用与区别,2018-05-02,48643,27,7,66,https://blog.csdn.net/shrimpcolo/article/details/80164741,Git,CSDN,The use and difference of several optional parameters of git clone,Git
+呐，码农呢，还是要多看点源码，喏->....,2018-03-24,643,1,0,1,https://blog.csdn.net/shrimpcolo/article/details/79679729,Java拾遗,CSDN,"Hey, coders, you still need to read more source code, here ->....",Java Supplements
+解决Win10下安装office2013问题,2015-09-02,12304,0,0,5,https://blog.csdn.net/shrimpcolo/article/details/48180529,杂谈,CSDN,Solve the problem of installing office2013 under Win10,Miscellaneous talk
+win7下如何删除没有权限的文件,2015-07-04,2999,0,0,1,https://blog.csdn.net/shrimpcolo/article/details/46756791,杂谈,CSDN,How to delete files without permission under win7,Miscellaneous talk
+Win10下修改git全部配置文件方法,2015-10-21,26065,2,0,4,https://blog.csdn.net/shrimpcolo/article/details/49302619,杂谈,CSDN,How to modify all git configuration files under Win10,Miscellaneous talk
+免费送纸质书， 感谢亲们的陪伴~,2017-12-11,1180,0,0,0,https://blog.csdn.net/shrimpcolo/article/details/78768861,杂谈,CSDN,"Free paper books, thank you for your company~",Miscellaneous talk
+MarkDown相关问题,2015-02-28,1176,0,1,0,https://blog.csdn.net/shrimpcolo/article/details/43955829,杂谈,CSDN,MarkDown related issues,Miscellaneous talk
+Kotlin实现Mongodb自增主键ID,2018-03-10,1053,0,0,0,https://blog.csdn.net/shrimpcolo/article/details/79512021,Mongodb,CSDN,Kotlin implements Mongodb auto-increment primary key ID,Mongodb
+连续2个月9.10.6是什么感觉,2017-10-15,4010,1,0,0,https://www.jianshu.com/p/0d6c8b924ce6,项目思考,Jianshu,What does it feel like to be on 9.10.6 for 2 consecutive months?,Project thinking
+如何解决github fork之后 更新问题,2017-03-09,13548,12,0,0,https://www.jianshu.com/p/840ea273f25a,工具类Tips,Jianshu,How to solve the update problem after github fork,Tool Tips
+AndroidStudio提示磁盘空间不足,2017-02-20,11223,0,0,0,https://www.jianshu.com/p/963f9191ace9,工具类Tips,Jianshu,AndroidStudio prompts that disk space is insufficient,Tool Tips
+【更新】Android Studio运行Java/Kotlin Application,2024-04-23,3.4k,8,9,0,https://juejin.cn/post/7360879734689546294,雕虫小技,Juejin,[Update] Android Studio runs Java/Kotlin Application,Trivial skills
+Window 11 bat文件启动Android模拟器,2024-04-24,766,1,1,0,https://juejin.cn/post/7361234872781013004,雕虫小技,Juejin,Window 11 bat file starts Android emulator,Trivial skills
+如何让find/grep提升工作效率?,2024-05-02,833,2,1,0,https://juejin.cn/post/7363674253169164328,雕虫小技,Juejin,How to make find/grep improve work efficiency?,Trivial skills
+Android Studio如何导入Github上的项目,2015-06-07,2286,0,0,1,https://blog.csdn.net/shrimpcolo/article/details/46400407,Uncategorized,CSDN,How Android Studio imports projects on Github,Uncategorized
+Phone模块后续文章说明,2015-07-04,1165,1,1,0,https://blog.csdn.net/shrimpcolo/article/details/46754619,Uncategorized,CSDN,Phone module follow-up article description,Uncategorized
+自定义Handler内存泄漏 (图文版),2024-04-22,783,10,评论,0,https://juejin.cn/post/7360230848410288143,Uncategorized,Juejin,Custom Handler memory leak (graphic version),Uncategorized
+Android Studio添加多国语言,2015-08-28,25011,8,0,9,https://blog.csdn.net/shrimpcolo/article/details/48050305,Uncategorized,CSDN,Android Studio adds multiple languages,Uncategorized
+Android MVP实践-专题视频课程,2017-04-24,817,0,0,3,https://blog.csdn.net/shrimpcolo/article/details/83576063,视频教程,CSDN,Android MVP Practice-Special Video Course,Video tutorial
+如何选择前端框架：ANGULAR VS EMBER VS REACT,2015-11-30,918,0,0,0,https://blog.csdn.net/shrimpcolo/article/details/50115311,Web App,CSDN,How to choose a front-end framework: ANGULAR VS EMBER VS REACT,Web App
+Swift + AFNetworking获取天气信息,2017-06-21,1206,1,0,0,https://blog.csdn.net/shrimpcolo/article/details/73532776,Web App,CSDN,Swift + AFNetworking to get weather information,Web App
+本地代码导入github仓库,2015-11-16,6328,2,0,2,https://blog.csdn.net/shrimpcolo/article/details/49870437,Web App,CSDN,Import local code into github repository,Web App
+github项目TAG,2015-11-16,785,0,0,0,https://blog.csdn.net/shrimpcolo/article/details/49871205,Web App,CSDN,github projectTAG,Web App
+推荐10个很棒的AngularJS学习指南,2015-11-30,842,1,0,0,https://blog.csdn.net/shrimpcolo/article/details/50115801,Web App,CSDN,Recommend 10 great AngularJS learning guides,Web App
+Google ZXing系列讲解(四)——ZXing 解决竖屏扫描问题,2017-02-27,14142,17,24,0,https://www.jianshu.com/p/b78a967e2ac7,ZXing分析,Jianshu,Google ZXing series explanation (4) - ZXing solves the problem of vertical screen scanning,ZXing analysis
+Google ZXing系列讲解(三)——ZXing 目录结构与主体流程,2017-02-26,10030,15,6,0,https://www.jianshu.com/p/de529919e4e9,ZXing分析,Jianshu,Google ZXing series explanation (3) - ZXing directory structure and main process,ZXing analysis
+Google ZXing系列讲解(一)——导入AS,2017-02-21,39835,42,15,0,https://www.jianshu.com/p/85e0bdb8bd2c,ZXing分析,Jianshu,Google ZXing Series Explanation (1) - Importing AS,ZXing analysis
+用Java DIY 函数式方法—— flatmap,2017-03-14,5514,0,0,0,https://www.jianshu.com/p/7e8b57d2d74a,函数式编程,Jianshu,DIY functional approach with Java - flatmap,functional programming
+用Java DIY 函数式方法—— map,2017-03-14,5010,0,0,0,https://www.jianshu.com/p/137dc59e6959,函数式编程,Jianshu,DIY functional method in Java - map,functional programming
+"用Java DIY 函数式方法—— forEach, find, filter",2017-03-13,5888,0,0,0,https://www.jianshu.com/p/f309d3aec0d3,函数式编程,Jianshu,"DIY functional methods in Java - forEach, find, filter",functional programming
+我敢打赌你做不了这道java题,2017-03-03,3793,3,3,0,https://www.jianshu.com/p/170be8c237d6,java拾遗,Jianshu,I bet you can't solve this java question,java relics

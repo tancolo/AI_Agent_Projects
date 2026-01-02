@@ -1,0 +1,60 @@
+Title,Article URL,Column Name
+Android Lollipop Phone module learning plan,https://blog.csdn.net/shrimpcolo/article/details/43313281,Android 5.0
+Directory structure and process model of Android L Phone,https://blog.csdn.net/shrimpcolo/article/details/43341775,Android 5.0
+Android L Phone process initialization_01,https://blog.csdn.net/shrimpcolo/article/details/43766579,Android 5.0
+Android L Phone process initialization_02,https://blog.csdn.net/shrimpcolo/article/details/43951989,Android 5.0
+MarkDown related issues,https://blog.csdn.net/shrimpcolo/article/details/43955829,Miscellaneous talk
+Directory analysis of Android L Telecom process initialization,https://blog.csdn.net/shrimpcolo/article/details/44257655,Android 5.0
+How Android Studio imports projects on Github,https://blog.csdn.net/shrimpcolo/article/details/46400407,Uncategorized
+Phone module follow-up article description,https://blog.csdn.net/shrimpcolo/article/details/46754619,Uncategorized
+How to solve Phone module bug,https://blog.csdn.net/shrimpcolo/article/details/46755325,Android 5.0
+Hide input method keyboard in ListView,https://blog.csdn.net/shrimpcolo/article/details/46756679,Android App
+How to delete files without permission under win7,https://blog.csdn.net/shrimpcolo/article/details/46756791,Miscellaneous talk
+Implement property animation in custom dialog boxes,https://blog.csdn.net/shrimpcolo/article/details/47219135,Android App
+Implement property animation in custom dialog boxes-continued,https://blog.csdn.net/shrimpcolo/article/details/47429931,Android App
+How to get the video path,https://blog.csdn.net/shrimpcolo/article/details/47787491,Android App
+Android Studio cannot display Layout preview,https://blog.csdn.net/shrimpcolo/article/details/48028591,Android Studio
+Android Studio adds multiple languages,https://blog.csdn.net/shrimpcolo/article/details/48050305,Uncategorized
+Solve the problem of installing office2013 under Win10,https://blog.csdn.net/shrimpcolo/article/details/48180529,Miscellaneous talk
+Android Studio Collection Facebook SDK Sample,https://blog.csdn.net/shrimpcolo/article/details/49150829,Android App
+Android Studio Collection Facebook SDK,https://blog.csdn.net/shrimpcolo/article/details/49153289,Android App
+How to modify all git configuration files under Win10,https://blog.csdn.net/shrimpcolo/article/details/49302619,Miscellaneous talk
+AS import source code is stuck in Gradle build interface,https://blog.csdn.net/shrimpcolo/article/details/49498965,Android Studio
+Import local code into github repository,https://blog.csdn.net/shrimpcolo/article/details/49870437,Web App
+github projectTAG,https://blog.csdn.net/shrimpcolo/article/details/49871205,Web App
+How to choose a front-end framework: ANGULAR VS EMBER VS REACT,https://blog.csdn.net/shrimpcolo/article/details/50115311,Web App
+Recommend 10 great AngularJS learning guides,https://blog.csdn.net/shrimpcolo/article/details/50115801,Web App
+Preparation for Facebook SDK integration,https://blog.csdn.net/shrimpcolo/article/details/50313995,Android App
+Facebook SDK integration login chapter,https://blog.csdn.net/shrimpcolo/article/details/50315905,Android App
+Sharing of Facebook SDK integration,https://blog.csdn.net/shrimpcolo/article/details/50316525,Android App
+Facebook SDK integration outline,https://blog.csdn.net/shrimpcolo/article/details/50310607,Android App
+Flip animation to achieve Gmail mailbox flip effect,https://blog.csdn.net/shrimpcolo/article/details/50409071,Android App
+The beginning of realizing the Gmail mailbox flipping effect,https://blog.csdn.net/shrimpcolo/article/details/50468712,Android App
+ActionBar to achieve Gmail mailbox flipping effect,https://blog.csdn.net/shrimpcolo/article/details/50474333,Android App
+ng2 hero guide related questions,https://blog.csdn.net/shrimpcolo/article/details/52947366,Front-end exploration
+Webpack packaging ng2 hero guide,https://blog.csdn.net/shrimpcolo/article/details/53020791,Front-end exploration
+TSC compilation based on Angular2 development,https://blog.csdn.net/shrimpcolo/article/details/53020965,Front-end exploration
+"Webpack, the basis of Angular2 development",https://blog.csdn.net/shrimpcolo/article/details/53020998,Front-end exploration
+How to upgrade ng2 project gracefully,https://blog.csdn.net/shrimpcolo/article/details/53225066,Front-end exploration
+Summary of the road to reconstruction of RecyclerView,https://blog.csdn.net/shrimpcolo/article/details/54880948,Android App
+AndroidStudio prompts that disk space is insufficient,https://blog.csdn.net/shrimpcolo/article/details/56014879,Android Studio
+Google ZXing Series Explanation (1) - Importing AS,https://blog.csdn.net/shrimpcolo/article/details/56286094,Android Studio
+Google ZXing series explanation (2) - Generating WIFi QR code,https://blog.csdn.net/shrimpcolo/article/details/56494504,Android App
+Google ZXing series explanation (3) - ZXing directory structure and main process,https://blog.csdn.net/shrimpcolo/article/details/57402440,Android App
+Google ZXing series explanation (4) - ZXing solves the problem of vertical screen scanning,https://blog.csdn.net/shrimpcolo/article/details/58176308,Android App
+Google ZXing series explanation (5) - ZXing imitates WeChat scanning UI,https://blog.csdn.net/shrimpcolo/article/details/59484615,Android App
+How to solve the update problem after github fork,https://blog.csdn.net/shrimpcolo/article/details/61191313,Git
+DIY functional approach with Java - flatmap,https://blog.csdn.net/shrimpcolo/article/details/62042206,Functional Mindfulness
+"DIY functional methods in Java - forEach, find, filter",https://blog.csdn.net/shrimpcolo/article/details/62037719,Uncategorized
+DIY functional method in Java - map,https://blog.csdn.net/shrimpcolo/article/details/62042077,Functional Mindfulness
+Functional Programming Practice - General Outline,https://blog.csdn.net/shrimpcolo/article/details/70036926,Functional Mindfulness
+Functional programming practice notes (1) - counting word frequency,https://blog.csdn.net/shrimpcolo/article/details/70037736,Functional Mindfulness
+Functional Programming Practice Notes (3) - Perfect Numbers,https://blog.csdn.net/shrimpcolo/article/details/70147737,Functional Mindfulness
+Android MVP Practice-Special Video Course,https://blog.csdn.net/shrimpcolo/article/details/83576063,Video tutorial
+Swift + AFNetworking to get weather information,https://blog.csdn.net/shrimpcolo/article/details/73532776,Web App
+The murder caused by PersistableBundle,https://blog.csdn.net/shrimpcolo/article/details/78504863,Android App
+"Free paper books, thank you for your company~",https://blog.csdn.net/shrimpcolo/article/details/78768861,Miscellaneous talk
+Kotlin implements Mongodb auto-increment primary key ID,https://blog.csdn.net/shrimpcolo/article/details/79512021,Mongodb
+"Hey, coders, you still need to read more source code, here ->....",https://blog.csdn.net/shrimpcolo/article/details/79679729,Java Supplements
+"Hey, coders, you still need to read more source code, here ->....",https://blog.csdn.net/shrimpcolo/article/details/79755441,Java Supplements
+The use and difference of several optional parameters of git clone,https://blog.csdn.net/shrimpcolo/article/details/80164741,Git
