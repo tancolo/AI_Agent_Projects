@@ -1,58 +1,54 @@
-# Media Scraper 🎵
+# Media Scraper (V0.2) 🎵
 
-This project is an automated media archiving tool created for educational and research purposes, developed with the assistance of Google Antigravity AI. It aims to retrieve and organize audio/video resources from compliant, open web platforms (such as YouTube, SoundCloud, etc.).
+This project is an automated media archiving tool created for educational and research purposes, developed with the assistance of Google Antigravity AI. It acts as a configuration-driven downloader for retrieving compliant media from open platforms.
 
 [中文版 (Chinese Version)](./README_CN.md)
 
-## 📖 Project Background
-The project focuses on compliant media resource retrieval:
-- **Objective**: Scrape publicly available audio content and convert it into desired formats (e.g., MP3).
-- **Process**: Uses Python scripts to automate search, analysis, and download logic.
-- **Robustness**: Features a comprehensive error-handling mechanism. If a download fails (due to large file size, website restrictions, or network issues), the script won't crash; instead, it logs the Song Title, Source URL, and Error Reason into a specific Markdown file.
+## 📖 Project Purpose
+- **Objective**: Archive publicly available Audio/Video content from platforms like YouTube based on a customizable configuration.
+- **Robustness**: Features specialized error handling. Failed downloads are not lost but logged into Markdown files for manual review.
 
-## ✨ Key Features
+## ✨ Key Features (V0.2)
 
-- **Compliant Parsing**: Interacts with public media platforms using compliant open-source libraries like `yt-dlp`.
-- **Multi-Format Support**: Supports audio extraction and saving as `.mp3` (with configurable quality).
-- **Smart Fallback Logic**: 
-  - On download failure, it automatically extracts **Song Title** + **Source URL** + **Reason**.
-  - Appends this information to `Ayumi_Hamasaki_Links.md`.
-- **Automatic Logging**: Generates `archiver_log.txt` to track every step of the execution.
-
-## 🚀 Current Progress
-
-Currently implemented a specialized archiver for **Ayumi Hamasaki (浜崎あゆみ)**: `ayumi_hamasaki_archiver.py`.
-- ✅ Integrated YouTube Search.
-- ✅ Local FFmpeg integration (auto-detected or manually configured).
-- ✅ Successfully scraped and converted multiple official audio resources.
-
-## 🗺️ Roadmap (Future Optimizations)
-
-Plans to refactor the script into a more generic, configuration-driven tool:
-- **Configuration-Driven**:
-  - **Artist/Keywords**: Dynamically set search targets.
-  - **Media Type**: Choose between Audio or Video.
-  - **Download Format**: Support for `mp3`, `webm`, `mp4`, etc.
-  - **Quality**: Allow setting bitrate or resolution (e.g., 320kbps, 1080p).
+- **Config-Driven**: Define artists, media types, and quality settings in `scraper_config.ini`.
+- **Multi-Format**: Supports **Audio** (mp3, etc.) and **Video** (mp4, webm, etc.).
+- **Smart Organization**:
+  - Downloads are automatically sorted into `downloads/{Artist Name}/`.
+  - Failed links are tracked in `markdown_links/{Artist_Name}_Links.md`.
+- **Quality Control**: Set specific bitrate for audio or resolution (e.g., 1080p, 720p) for video.
 
 ## 🛠️ Usage
 
 1. **Prerequisites**:
    ```powershell
-   # Install core dependencies
    pip install yt-dlp
-   # Install FFmpeg (for format conversion)
    winget install --id Gyan.FFmpeg
    ```
 
-2. **Run Script**:
-   ```powershell
-   python ayumi_hamasaki_archiver.py
+2. **Configuration**:
+   Edit `scraper_config.ini` to add your targets:
+   ```ini
+   [Artist:My Favorite Band]
+   keywords = Band Name official video
+   media_type = video
+   quality = 1080p
    ```
 
-3. **Check Results**:
-   - Successful MP3s: `./downloads/ayumi_hamasaki/`
-   - Failure records: `./Ayumi_Hamasaki_Links.md`
+3. **Run Script**:
+   ```powershell
+   python media_archiver.py
+   ```
+
+4. **Output**:
+   - **Media**: `./downloads/`
+   - **Logs**: `archiver_log.txt`
+   - **Fallback Links**: `./markdown_links/`
+
+## 📂 Project Structure
+- `media_archiver.py`: Main entry point.
+- `scraper_config.ini`: Configuration file.
+- `media_python/`: Core logic modules.
+- `ayumi_hamasaki_archiver.py`: Legacy script (V0.1).
 
 ---
 *Note: This project and its scripts are for educational research purposes only. Please use within the bounds of laws and platform terms of service.*

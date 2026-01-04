@@ -1,0 +1,3 @@
+"""
+Media Scraper Python Package
+"""

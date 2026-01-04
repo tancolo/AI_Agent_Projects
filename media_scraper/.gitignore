@@ -7,6 +7,9 @@ download*/
 # Logs
 archiver_log.txt
 
+# Fallback links
+#markdown_links/
+
 # Python environment
 __pycache__/
 *.pyc
@@ -17,6 +20,7 @@ env/
 venv/
 .env
 .venv/
+media_python/__pycache__/
 
 # OS generated files
 .DS_Store

@@ -1,9 +1,4 @@
-# 中文Prompt
-这是中文Prompt “用Python抓取网络上，特别是专门提供音乐播放、免费下载的音乐平台，抓取日本歌手滨崎步(Ayumi hamasaki, 浜崎あゆみ)的歌曲，我需要的是*.mp3格式的。
-
-要是无法下载，就给出歌曲的链接，保存到markdown格式文件中。” 我需要对应英文的，方便AI Agent阅读分析
-
-===> 经过Gemini优化后的Prompt
+# Prompt EN V0.1
 Act as a Python automation expert. I need a script for **educational research purposes** to interact with public music APIs or open web archives.
 
 **Objective:**
@@ -16,4 +11,8 @@ Find and archive audio content for the artist **Ayumi Hamasaki (浜崎あゆみ)
 
 **Output:**
 Please provide the full Python code with necessary comments explaining how to run it.
+
+# Prompt EN V0.2
+
+
 
