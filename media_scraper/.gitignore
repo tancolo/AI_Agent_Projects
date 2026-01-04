@@ -1,0 +1,23 @@
+# Media Scraper - Git Ignore File
+
+# Media downloads
+downloads/
+download*/
+
+# Logs
+archiver_log.txt
+
+# Python environment
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+.venv/
+
+# OS generated files
+.DS_Store
+Thumbs.db
