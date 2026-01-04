@@ -14,6 +14,7 @@ class MediaScraper:
         self.links_base = Path("./markdown_links")
         self.log_file = Path("archiver_log.txt")
         self.ffmpeg_location = self.general_config.get("ffmpeg_location", "")
+        self.max_results = self.general_config.get("max_results", 5)
 
     def _get_ffmpeg_args(self) -> List[str]:
         """Return ffmpeg-location arguments if configured."""
@@ -192,7 +193,7 @@ class MediaScraper:
             processed_urls = set()
             
             for query in artist["keywords"]:
-                videos = self.search_youtube(query)
+                videos = self.search_youtube(query, self.max_results)
                 
                 for video in videos:
                     url = video["url"]

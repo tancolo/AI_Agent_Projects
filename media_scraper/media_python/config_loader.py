@@ -27,6 +27,7 @@ class ConfigLoader:
                 "media_type": gen.get("media_type", "audio"),
                 "format": gen.get("format", "webm"),
                 "quality": gen.get("quality", "best"),
+                "max_results": gen.getint("max_results", 5),
                 "ffmpeg_location": gen.get("ffmpeg_location", "")
             }
             
