@@ -102,16 +102,22 @@ class MediaScraper:
 
     def download_media(self, video_url: str, title: str, artist_output_path: Path, artist_config: Dict[str, Any]) -> bool:
         """Download media based on artist configuration."""
-        log_message(f"Attempting download: {title}", "INFO", self.log_file)
         
         media_type = artist_config["media_type"]
         fmt = artist_config["format"]
         quality = artist_config["quality"]
         
-        # Sanitize filename
-        safe_title = "".join(c for c in title if c.isalnum() or c in (' ', '-', '_', '.')).strip()
-        safe_title = safe_title[:100]
-        output_template = str(artist_output_path / f"{safe_title}.%(ext)s")
+        # Handle output template based on whether we have a specific title
+        if title is None:
+            # Auto-title mode: let yt-dlp use the video's actual title
+            output_template = str(artist_output_path / "%(title)s.%(ext)s")
+            log_message(f"Attempting download (auto-title): {video_url}", "INFO", self.log_file)
+        else:
+            # Manual title mode: sanitize and use provided title
+            log_message(f"Attempting download: {title}", "INFO", self.log_file)
+            safe_title = "".join(c for c in title if c.isalnum() or c in (' ', '-', '_', '.')).strip()
+            safe_title = safe_title[:100]
+            output_template = str(artist_output_path / f"{safe_title}.%(ext)s")
         
         cmd = [sys.executable, "-m", "yt_dlp"]
         
@@ -205,3 +211,35 @@ class MediaScraper:
                     
                     if not success:
                         self.append_to_links_file(links_file, video["title"], url, "Download restricted or failed")
+
+    def download_direct(self, url: str) -> bool:
+        """
+        Download a single URL directly using general config settings.
+        Used for ad-hoc downloads via CLI.
+        """
+        log_message(f"Direct download requested: {url}", "INFO", self.log_file)
+        
+        # Setup output directory
+        output_path = self.output_base / "Direct_Downloads"
+        ensure_directory(output_path)
+        
+        # Initialize links file for direct downloads
+        links_file = self.initialize_links_file("Direct_Downloads")
+        
+        # Create a temporary "artist config" using general settings
+        temp_config = {
+            "media_type": self.general_config.get("media_type", "audio"),
+            "format": self.general_config.get("format", "webm"),
+            "quality": self.general_config.get("quality", "best")
+        }
+        
+        # Pass None as title to enable auto-titling from yt-dlp metadata
+        # Attempt download
+        success = self.download_media(url, None, output_path, temp_config)
+        
+        if not success:
+            # For failed downloads, use URL as fallback identifier
+            fallback_title = url.split("/")[-1] or "direct_download"
+            self.append_to_links_file(links_file, fallback_title, url, "Direct download failed")
+            
+        return success

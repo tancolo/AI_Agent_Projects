@@ -25,3 +25,11 @@ Refactor the script into a universal, configuration-based media scraping tool wi
    - **Video**: Allow setting the resolution (e.g., 1080p); defaults to `720p`.
 8. **Fallback Mechanism**: If the script cannot complete a download directly, extract the original link and save it to a Markdown file. There should be a `markdown` folder in the project to store link info for failed downloads for each artist, similar to the current `Ayumi_Hamasaki_Links.md`. For example, if Bruno Mars, Ayumi Hamasaki, and Taylor Swift all have failed links, there should be three corresponding files in the `markdown` folder.
 9. Do not rush to execute the script. First, fully understand the upgrade requirements, then output your upgrade strategy and a subsequent execution plan.
+# Prompt EN V0.3
+Current V0.2 script is working well, but needs to be upgraded to support ad-hoc direct downloading from URLs (e.g., YouTube Shorts) in addition to the config-based batch mode.
+1.  **Dual Mode Requirement**: The script should support both the existing configuration-driven mode and a new "Direct URL" mode.
+    -   **Config Mode**: Continues to work as before (reading artists from config).
+    -   **Direct URL Mode**: Allows running the script with a specific YouTube URL (or other supported URL) argument to download it directly without editing the config file.
+2.  **Extensibility**: Design the solution to be modular and extensible for future needs, rather than just a quick hack. It should ideally be integrated into the main script structure.
+3.  **Artifact Management**: The generated planning artifacts (`implementation_plan.md`, `walkthrough.md`, `task.md`) should not overwrite the previous V0.2 versions. Instead, use a version suffix logic (e.g., `implementation_plan_V0.3.md`) to preserve the history of the project evolution.
+4.  **Process**: Do not rush to code. First, analyze the requirements and provide a detailed upgrade strategy and execution plan (saved as V0.3 artifacts) for review.

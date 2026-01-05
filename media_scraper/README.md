@@ -1,54 +1,75 @@
-# Media Scraper (V0.2) 🎵
+# Media Scraper (V0.3) 🎵
 
-This project is an automated media archiving tool created for educational and research purposes, developed with the assistance of Google Antigravity AI. It acts as a configuration-driven downloader for retrieving compliant media from open platforms.
+This project is an automated media archiving tool created for educational and research purposes, developed with the assistance of Google Antigravity AI. It acts as a configuration-driven downloader for retrieving compliant media from open platforms, with support for both batch processing and ad-hoc direct URL downloads.
 
 [中文版 (Chinese Version)](./README_CN.md)
 
 ## 📖 Project Purpose
-- **Objective**: Archive publicly available Audio/Video content from platforms like YouTube based on a customizable configuration.
+- **Objective**: Archive publicly available Audio/Video content from platforms like YouTube based on a customizable configuration OR download specific URLs directly via command line.
 - **Robustness**: Features specialized error handling. Failed downloads are not lost but logged into Markdown files for manual review.
 
-## ✨ Key Features (V0.2)
+## ✨ Key Features (V0.3)
 
-- **Config-Driven**: Define artists, media types, and quality settings in `scraper_config.ini`.
+- **Dual Mode Operation**:
+  - **Config Mode**: Batch process multiple artists from `scraper_config.ini`
+  - **Direct URL Mode**: Download specific videos you find while browsing
 - **Multi-Format**: Supports **Audio** (mp3, etc.) and **Video** (mp4, webm, etc.).
 - **Smart Organization**:
-  - Downloads are automatically sorted into `downloads/{Artist Name}/`.
-  - Failed links are tracked in `markdown_links/{Artist_Name}_Links.md`.
+  - Config downloads: `downloads/{Artist Name}/`
+  - Direct downloads: `downloads/Direct_Downloads/`
+  - Failed links: `markdown_links/{Folder_Name}_Links.md`
 - **Quality Control**: Set specific bitrate for audio or resolution (e.g., 1080p, 720p) for video.
 
 ## 🛠️ Usage
 
-1. **Prerequisites**:
-   ```powershell
-   pip install yt-dlp
-   winget install --id Gyan.FFmpeg
-   ```
+### Prerequisites
+```powershell
+pip install yt-dlp
+winget install --id Gyan.FFmpeg
+```
 
-2. **Configuration**:
-   Edit `scraper_config.ini` to add your targets:
-   ```ini
-   [Artist:My Favorite Band]
-   keywords = Band Name official video
-   media_type = video
-   quality = 1080p
-   ```
+### Config Mode (Batch Processing)
+Edit `scraper_config.ini` to add your targets:
+```ini
+[Artist:My Favorite Band]
+keywords = Band Name official video
+media_type = video
+quality = 1080p
+```
 
-3. **Run Script**:
-   ```powershell
-   python media_archiver.py
-   ```
+Run:
+```powershell
+python media_archiver.py
+```
 
-4. **Output**:
-   - **Media**: `./downloads/`
-   - **Logs**: `archiver_log.txt`
-   - **Fallback Links**: `./markdown_links/`
+### Direct URL Mode (V0.3 New!)
+Download a single URL:
+```powershell
+python media_archiver.py https://www.youtube.com/watch?v=...
+```
+
+Download multiple URLs:
+```powershell
+python media_archiver.py URL1 URL2 URL3
+```
+
+Download from a text file (one URL per line):
+```powershell
+python media_archiver.py --list my_urls.txt
+```
+
+### Output Locations
+- **Config Mode**: `./downloads/{Artist}/`
+- **Direct Mode**: `./downloads/Direct_Downloads/`
+- **Logs**: `archiver_log.txt`
+- **Fallback Links**: `./markdown_links/`
 
 ## 📂 Project Structure
-- `media_archiver.py`: Main entry point.
-- `scraper_config.ini`: Configuration file.
+- `media_archiver.py`: Main entry point with CLI support.
+- `scraper_config.ini`: Configuration file for batch mode.
 - `media_python/`: Core logic modules.
 - `ayumi_hamasaki_archiver.py`: Legacy script (V0.1).
+- `debug/`: Debugging and comparison tools.
 
 ---
 *Note: This project and its scripts are for educational research purposes only. Please use within the bounds of laws and platform terms of service.*
