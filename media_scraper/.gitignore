@@ -3,6 +3,7 @@
 # Media downloads
 downloads/
 download*/
+Issues/
 
 # Logs
 archiver_log.txt
