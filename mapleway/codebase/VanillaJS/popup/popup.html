@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MapleWay - AAIP Data</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>🍁 MapleWay</h1>
+      <p class="subtitle">Alberta Immigration Program Tracker</p>
+    </header>
+
+    <div class="controls">
+      <label for="stream-select">Select Immigration Stream:</label>
+      <select id="stream-select">
+        <option value="">-- Choose a Stream --</option>
+        <option value="Alberta Opportunity Stream">Alberta Opportunity Stream (AOS)</option>
+        <option value="Rural Renewal Stream">Rural Renewal Stream</option>
+        <option value="Tourism and Hospitality Stream">Tourism and Hospitality Stream</option>
+        <option value="Dedicated Health Care Pathways">Dedicated Health Care Pathways</option>
+        <option value="Alberta Express Entry Stream">Alberta Express Entry Stream</option>
+      </select>
+      <button id="scrape-btn" class="btn-primary">Analyze Page</button>
+    </div>
+
+    <div id="loading" class="loading hidden">
+      <div class="spinner"></div>
+      <p>Analyzing data...</p>
+    </div>
+
+    <div id="error" class="error hidden"></div>
+
+    <div id="results" class="results hidden">
+      <!-- Summary Section -->
+      <section class="data-section">
+        <h2>📊 Program Summary</h2>
+        <div id="summary-2025" class="summary-box"></div>
+        <div id="summary-2026-container" class="summary-box">
+          <!-- Will inject General + Stream Specific tables here -->
+        </div>
+      </section>
+
+      <!-- Worker Expression Of Interest (Formerly Stream Allocation) -->
+      <section id="eoi-section" class="data-section hidden">
+        <h2>📋 Worker Expression Of Interest</h2>
+        <div id="eoi-table"></div>
+      </section>
+
+      <!-- Draw Information -->
+      <section id="draw-section" class="data-section hidden">
+        <h2>🎲 Draw Information</h2>
+        <div id="draw-table"></div>
+      </section>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
