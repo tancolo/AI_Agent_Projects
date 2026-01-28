@@ -14,6 +14,11 @@ function init() {
     });
 
     scrapeBtn.addEventListener('click', handleScrape);
+
+    // Initialize Download Manager
+    if (typeof DownloadManager !== 'undefined') {
+        DownloadManager.init();
+    }
 }
 
 /**
@@ -225,6 +230,11 @@ function displayResults(data) {
 
         drawTableEl.innerHTML = createTable(dataWithTotal, true);
     }
+
+    // Show Download Section
+    if (typeof DownloadManager !== 'undefined') {
+        DownloadManager.updateState(true, selectedStream);
+    }
 }
 
 /**
@@ -320,4 +330,9 @@ function hideResults() {
     document.getElementById('results').classList.add('hidden');
     document.getElementById('eoi-section').classList.add('hidden');
     document.getElementById('draw-section').classList.add('hidden');
+
+    // Hide Download Section
+    if (typeof DownloadManager !== 'undefined') {
+        DownloadManager.updateState(false, '');
+    }
 }

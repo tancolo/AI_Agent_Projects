@@ -1,0 +1,47 @@
+.download-container {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.download-controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px;
+    background-color: #f1f8fc;
+    border: 1px solid #ddecfa;
+    border-radius: 12px;
+}
+
+.btn-download {
+    flex: 1;
+    padding: 12px 10px;
+    border: none;
+    border-radius: 20px;
+    /* Fully rounded or just rounded? "圆角的按钮" usually means rounded corners. */
+    background: linear-gradient(135deg, #83C6E9 0%, #0077b6 100%);
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-download:disabled {
+    background: #e9ecef;
+    color: #adb5bd;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+.btn-download:not(:disabled):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-download:not(:disabled):active {
+    transform: translateY(0);
+}
