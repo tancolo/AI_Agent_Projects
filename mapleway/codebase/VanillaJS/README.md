@@ -1,6 +1,6 @@
 # MapleWay Browser Extension v0.1
 
-🍁 **Alberta Advantage Immigration Program (AAIP) Data Scraper and Analyzer**
+<img src="./icons/icon16.png" width="16" style="vertical-align: middle;" alt="MapleWay Icon"/> **Alberta Advantage Immigration Program (AAIP) Data Scraper and Analyzer**
 
 ## Overview
 
