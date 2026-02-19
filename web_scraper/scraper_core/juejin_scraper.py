@@ -99,17 +99,21 @@ class JuejinScraper:
             soup = BeautifulSoup(content, 'html.parser')
             
             # Select Items
-            items = soup.select('.entry-list .item')
+            # Use direct child selector to avoid picking up nested .item elements (like stats)
+            items = soup.select('.entry-list > .item')
             if not items:
-                items = soup.select('.entry-list li.item')
+                items = soup.select('.entry-list > li.item')
             
             print(f"Found {len(items)} articles. Processing...")
 
-            for item in items:
+            for i, item in enumerate(items):
                 try:
                     # Title
                     title_tag = item.select_one('a.title')
-                    if not title_tag: continue
+                    if not title_tag: 
+                        # Debug: Print why skipped (should be rare with better selector)
+                        print(f"Skipping item {i}: No title tag found.")
+                        continue
                     
                     title = title_tag.get_text(strip=True)
                     url_suffix = title_tag['href']
@@ -161,17 +165,26 @@ class JuejinScraper:
                     })
 
                 except Exception as e:
-                    print(f"Error parsing item: {e}")
+                    print(f"Error parsing item {i}: {e}")
 
             # Details
-            print("Fetching details...")
-            for article in self.articles:
+            total_articles = len(self.articles)
+            print(f"Fetching details... Total: {total_articles}")
+            
+            for i, article in enumerate(self.articles):
+                # Progress Countdown
+                if (i + 1) % 5 == 0 or i == 0:
+                    processed = i
+                    remaining = total_articles - processed
+                    print(f"Fetching details: Total {total_articles} - Processed {processed} = Remaining {remaining}")
+
                 if article['Article URL'] != "N/A":
                     details = await self.get_article_details(browser, article['Article URL'])
                     article['Column Name'] = details['Column Name']
                     if details['Exact Date'] != "N/A":
                          article['Publish Date'] = details['Exact Date']
 
+            print(f"Fetching details completed. Processed all {total_articles} articles.")
             await browser.close()
 
     def save_csv(self):
@@ -179,7 +192,15 @@ class JuejinScraper:
         # Sort not possible accurately if date is "1 year ago" without conversion
         # Will save as is.
         import os
-        output_path = os.path.join('scraper_output', 'juejin_articles_data.csv')
+        # Robust path resolution
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.dirname(current_dir)
+        output_dir = os.path.join(project_root, 'scraper_output')
+        
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
+
+        output_path = os.path.join(output_dir, 'juejin_articles_data.csv')
         df.to_csv(output_path, index=False)
         print(f"Data saved to {output_path}")
 

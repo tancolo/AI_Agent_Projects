@@ -151,8 +151,18 @@ class JianshuScraper:
                     print(f"Error parsing item: {e}")
 
             # Visit details
-            print("Fetching details (Notebook name, etc.) from individual pages...")
-            for article in self.articles:
+            total_articles = len(self.articles)
+            print(f"Fetching details (Notebook name, etc.) from individual pages... Total: {total_articles}")
+            
+            for i, article in enumerate(self.articles):
+                # Progress Countdown
+                # Total {total} - Processed {current} = Remaining {remaining}
+                # Print every 5 articles or for the first one
+                if (i + 1) % 5 == 0 or i == 0:
+                    processed = i
+                    remaining = total_articles - processed
+                    print(f"Fetching details: Total {total_articles} - Processed {processed} = Remaining {remaining}")
+
                 if article['Article URL'] != "N/A":
                     details = await self.get_article_details(browser, article['Article URL'])
                     article['Column Name'] = details['Column Name']
@@ -162,6 +172,7 @@ class JianshuScraper:
                         # Fallback if not found, use like count or 0
                         article['Bookmark Count'] = "0" 
 
+            print(f"Fetching details completed. Processed all {total_articles} articles.")
             await browser.close()
 
     def save_csv(self):
@@ -171,7 +182,17 @@ class JianshuScraper:
         df = df.sort_values(by='Publish Date', ascending=True)
         
         import os
-        output_path = os.path.join('scraper_output', 'jianshu_articles_data.csv')
+        # Robust path resolution:
+        # Script is in scraper_core/, so root is one level up.
+        current_dir = os.path.dirname(os.path.abspath(__file__)) # .../web_scraper/scraper_core
+        project_root = os.path.dirname(current_dir) # .../web_scraper
+        output_dir = os.path.join(project_root, 'scraper_output')
+        
+        # Ensure directory exists just in case
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
+            
+        output_path = os.path.join(output_dir, 'jianshu_articles_data.csv')
         df.to_csv(output_path, index=False)
         print(f"Data saved to {output_path}")
 

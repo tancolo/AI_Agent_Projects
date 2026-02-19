@@ -2,8 +2,13 @@ import pandas as pd
 import os
 
 def main():
+    # Robust path resolution
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.dirname(current_dir)
+    output_dir = os.path.join(project_root, 'scraper_output')
+
     try:
-        input_path = os.path.join('scraper_output', 'merged_articles_final.csv')
+        input_path = os.path.join(output_dir, 'merged_articles_final.csv')
         df = pd.read_csv(input_path)
     except:
         print(f"Error: {input_path} not found")
@@ -39,7 +44,7 @@ def main():
             
         md_lines.append("") # Add space between columns
 
-    output_path = os.path.join('scraper_output', 'final_articles_report.md')
+    output_path = os.path.join(output_dir, 'final_articles_report.md')
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write("\n".join(md_lines))
         

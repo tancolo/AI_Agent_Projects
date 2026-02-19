@@ -57,23 +57,28 @@ def main():
     socket.setdefaulttimeout(3) # 3 seconds timeout
     
     # 1. Read Data
+    # Robust path resolution
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.dirname(current_dir)
+    output_dir = os.path.join(project_root, 'scraper_output')
+
     # Priority: Jianshu > Juejin > CSDN
     try:
-        df_jianshu = pd.read_csv(os.path.join('scraper_output', 'jianshu_articles_data.csv'))
+        df_jianshu = pd.read_csv(os.path.join(output_dir, 'jianshu_articles_data.csv'))
         df_jianshu['Source'] = 'Jianshu'
     except:
         df_jianshu = pd.DataFrame()
         print("Warning: jianshu_articles_data.csv not found")
 
     try:
-        df_juejin = pd.read_csv(os.path.join('scraper_output', 'juejin_articles_data.csv'))
+        df_juejin = pd.read_csv(os.path.join(output_dir, 'juejin_articles_data.csv'))
         df_juejin['Source'] = 'Juejin'
     except:
         df_juejin = pd.DataFrame()
         print("Warning: juejin_articles_data.csv not found")
 
     try:
-        df_csdn = pd.read_csv(os.path.join('scraper_output', 'csdn_articles_data.csv'))
+        df_csdn = pd.read_csv(os.path.join(output_dir, 'csdn_articles_data.csv'))
         df_csdn['Source'] = 'CSDN'
     except:
         df_csdn = pd.DataFrame()
@@ -122,7 +127,7 @@ def main():
     df_clean = df_clean.sort_values(by=['Column Name En'])
 
     # 6. Save
-    output_path = os.path.join('scraper_output', 'merged_articles_final.csv')
+    output_path = os.path.join(output_dir, 'merged_articles_final.csv')
     df_clean.to_csv(output_path, index=False)
     print(f"Saved to {output_path}")
 

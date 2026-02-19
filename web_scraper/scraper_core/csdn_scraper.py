@@ -177,13 +177,22 @@ class CSDNScraper:
 
             # Now visit each article to get column name
             # We can use the same context
-            print("Fetching column names from individual pages...")
-            for article in self.articles:
+            total_articles = len(self.articles)
+            print(f"Fetching column names from individual pages... Total: {total_articles}")
+            
+            for i, article in enumerate(self.articles):
+                # Progress Countdown
+                if (i + 1) % 5 == 0 or i == 0:
+                    processed = i
+                    remaining = total_articles - processed
+                    print(f"Fetching details: Total {total_articles} - Processed {processed} = Remaining {remaining}")
+
                 if article['Article URL'] != "N/A":
                     # print(f"Checking details for: {article['Title']}")
                     col_name = await self.get_article_details(browser, article['Article URL'])
                     article['Column Name'] = col_name if col_name else "Uncategorized"
 
+            print(f"Fetching details completed. Processed all {total_articles} articles.")
             await browser.close()
 
     def save_csv(self):
@@ -194,7 +203,15 @@ class CSDNScraper:
         df = df.sort_values(by='Publish Date', ascending=True) # Oldest to Newest
         
         import os
-        output_path = os.path.join('scraper_output', 'csdn_articles_data.csv')
+        # Robust path resolution
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.dirname(current_dir)
+        output_dir = os.path.join(project_root, 'scraper_output')
+        
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
+            
+        output_path = os.path.join(output_dir, 'csdn_articles_data.csv')
         df.to_csv(output_path, index=False)
         print(f"Data saved to {output_path}")
 
