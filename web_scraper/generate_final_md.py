@@ -11,7 +11,7 @@ def main():
     # Expected markdown format:
     # ### Column Name 1
     # #### Title 1 (En)
-    # ![Title 1 (Cn)](url)
+    # [Title 1 (Cn)](url)
     
     md_lines = []
     
@@ -33,7 +33,7 @@ def main():
             url = row['Article URL']
             
             md_lines.append(f"#### {title_en}")
-            md_lines.append(f"![{title_cn}]({url})")
+            md_lines.append(f"[{title_cn}]({url})")
             
         md_lines.append("") # Add space between columns
 

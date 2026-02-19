@@ -1,6 +1,8 @@
 # User specific folders
 figures/
 article/
+Debug_SKILLs/
+skills_scripts/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
