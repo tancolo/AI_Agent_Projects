@@ -3,6 +3,8 @@ figures/
 article/
 Debug_SKILLs/
 skills_scripts/
+documents/
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

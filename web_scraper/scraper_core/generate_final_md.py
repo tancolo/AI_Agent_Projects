@@ -1,10 +1,12 @@
 import pandas as pd
+import os
 
 def main():
     try:
-        df = pd.read_csv('merged_articles_final.csv')
+        input_path = os.path.join('scraper_output', 'merged_articles_final.csv')
+        df = pd.read_csv(input_path)
     except:
-        print("Error: merged_articles_final.csv not found")
+        print(f"Error: {input_path} not found")
         return
 
     # Group by Column Name En
@@ -37,10 +39,11 @@ def main():
             
         md_lines.append("") # Add space between columns
 
-    with open('final_articles_report.md', 'w', encoding='utf-8') as f:
+    output_path = os.path.join('scraper_output', 'final_articles_report.md')
+    with open(output_path, 'w', encoding='utf-8') as f:
         f.write("\n".join(md_lines))
         
-    print("Markdown report saved to final_articles_report.md")
+    print(f"Markdown report saved to {output_path}")
 
 if __name__ == "__main__":
     main()

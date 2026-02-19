@@ -193,8 +193,10 @@ class CSDNScraper:
         df['Publish Date'] = pd.to_datetime(df['Publish Date'], format='%Y.%m.%d', errors='coerce')
         df = df.sort_values(by='Publish Date', ascending=True) # Oldest to Newest
         
-        df.to_csv('articles_data.csv', index=False)
-        print("Data saved to articles_data.csv")
+        import os
+        output_path = os.path.join('scraper_output', 'csdn_articles_data.csv')
+        df.to_csv(output_path, index=False)
+        print(f"Data saved to {output_path}")
 
 if __name__ == "__main__":
     scraper = CSDNScraper("https://blog.csdn.net/shrimpcolo?type=blog")

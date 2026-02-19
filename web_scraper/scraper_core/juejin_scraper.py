@@ -178,8 +178,10 @@ class JuejinScraper:
         df = pd.DataFrame(self.articles)
         # Sort not possible accurately if date is "1 year ago" without conversion
         # Will save as is.
-        df.to_csv('juejin_articles_data.csv', index=False)
-        print("Data saved to juejin_articles_data.csv")
+        import os
+        output_path = os.path.join('scraper_output', 'juejin_articles_data.csv')
+        df.to_csv(output_path, index=False)
+        print(f"Data saved to {output_path}")
 
 if __name__ == "__main__":
     scraper = JuejinScraper("https://juejin.cn/user/345669300651932/posts")
