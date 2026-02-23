@@ -1,0 +1,19 @@
+{
+  "platforms": {
+    "csdn": {
+      "enabled": true,
+      "url": "https://blog.csdn.net/shrimpcolo?type=blog",
+      "output_csv": "scraper_output/csdn_articles_data.csv"
+    },
+    "jianshu": {
+      "enabled": true,
+      "url": "https://www.jianshu.com/u/d614825bc8a1",
+      "output_csv": "scraper_output/jianshu_articles_data.csv"
+    },
+    "juejin": {
+      "enabled": true,
+      "url": "https://juejin.cn/user/345669300651932/posts",
+      "output_csv": "scraper_output/juejin_articles_data.csv"
+    }
+  }
+}

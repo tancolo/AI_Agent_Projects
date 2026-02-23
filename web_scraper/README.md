@@ -1,9 +1,9 @@
-# Web Scraper V0.2
+# Web Scraper V0.3
 
 [中文版本 (Chinese Version)](README_CN.md)
 
 ## Overview
-Web Scraper V0.2 is a multi-platform automated tool designed to aggregate article metadata from various technical blogs (CSDN, Jianshu, Juejin). It handles infinite scrolling, pagination, and detail extraction, then merges the data, de-duplicates it, translates titles from Chinese to English, and generates a structured Markdown report.
+Web Scraper V0.3 is a multi-platform automated tool designed to aggregate article metadata from various technical blogs (CSDN, Jianshu, Juejin). It handles infinite scrolling, pagination, and detail extraction, then merges the data, de-duplicates it, translates titles from Chinese to English, and generates a structured Markdown report.
 
 ## Features
 - **Multi-Platform Support**: Scrapes data from CSDN, Jianshu, and Juejin.
@@ -12,12 +12,15 @@ Web Scraper V0.2 is a multi-platform automated tool designed to aggregate articl
 - **IPv4 Optimized Translation**: Fast translation using Google Translate bypasses IPv6 timeouts.
 - **Progress Tracking**: Real-time progress countdown in the terminal (`Total - Processed = Remaining`).
 - **Structured Output**: Clean CSV data and a professional Markdown report.
+- **Configuration-Driven**: Target URLs and output directories are fully manageable via an external `config.json` file.
+- **Standalone Mode**: Scraper scripts can be run and tested independently from the command line while still reading the main configuration.
 
 > [!NOTE]
-> **Implementation Note**: In V0.2, the target blog user IDs (e.g., `shrimpcolo`) are currently hardcoded within each scraper script in `scraper_core/`. Support for external configuration files (e.g., `.ini` or `.yaml`) is planned for a future release to allow users to easily change the target accounts without modifying the code.
+> **V0.3 Updates**: Hardcoded platform URLs have been successfully removed from `scraper_core/` files. You can now easily duplicate configurations or change source URLs in the project's root `config.json` file.
 
 ## Directory Structure
-- `main_scraper.py`: The main entry point for the entire pipeline.
+- `config.json`: The central configuration file mapping platforms to URLs and export paths.
+- `main_scraper.py`: The orchestrator that reads `config.json` and sequentially runs enabled platform scrapers.
 - `scraper_core/`: Contains the core logic for scraping each platform and post-processing.
   - `csdn_scraper.py`
   - `jianshu_scraper.py`
@@ -48,14 +51,25 @@ Web Scraper V0.2 is a multi-platform automated tool designed to aggregate articl
 
 ## Configuration & Usage
 
-The project is designed to be plug-and-play. You only need to run the main script from the root directory:
+The project is highly configurable. Open `config.json` in the root directory to set `"enabled": true/false`, configure source `url`s, and rename outputs.
 
+### Pipeline Execution
+To run all enabled scrapers followed by the deduplication and report generation steps:
 ```bash
 python main_scraper.py
 ```
 
+### Standalone Scraper Execution
+To test or scrape data for a single platform:
+```bash
+python scraper_core/csdn_scraper.py
+python scraper_core/jianshu_scraper.py
+python scraper_core/juejin_scraper.py
+```
+Each script will automatically parse `config.json` for its properties.
+
 ### Script Execution Flow
-1. **Scraping**: Calls the three platform scrapers sequentially. Browsers will open (headless=False) to ensure stability.
+1. **Scraping**: Loads configurations and conditionally invokes the three platform scrapers. Browsers will open (headless=False).
 2. **Merging & Translating**: Combines the CSVs, removes duplicates based on titles, and uses an IPv4-forced patch to quickly translate titles.
 3. **Report Generation**: Groups articles by column/category and writes to a Markdown file.
 

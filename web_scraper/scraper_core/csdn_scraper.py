@@ -5,8 +5,9 @@ from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup
 
 class CSDNScraper:
-    def __init__(self, target_url):
+    def __init__(self, target_url, output_csv="csdn_articles_data.csv"):
         self.target_url = target_url
+        self.output_csv = output_csv
         self.articles = []
 
     async def scroll_to_bottom(self, page):
@@ -88,7 +89,7 @@ class CSDNScraper:
             page = await context.new_page()
 
             print(f"Navigating to {self.target_url}")
-            await page.goto(self.target_url)
+            await page.goto(self.target_url, timeout=60000)
             
             # Handle infinite scroll
             await self.scroll_to_bottom(page)
@@ -211,11 +212,28 @@ class CSDNScraper:
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
             
-        output_path = os.path.join(output_dir, 'csdn_articles_data.csv')
+        output_path = os.path.join(output_dir, os.path.basename(self.output_csv))
         df.to_csv(output_path, index=False)
         print(f"Data saved to {output_path}")
 
 if __name__ == "__main__":
-    scraper = CSDNScraper("https://blog.csdn.net/shrimpcolo?type=blog")
+    import json
+    import os
+    
+    # Load config from root directory
+    config_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'config.json')
+    try:
+        with open(config_path, 'r', encoding='utf-8') as f:
+            config = json.load(f)
+            csdn_config = config.get('platforms', {}).get('csdn', {})
+            
+            target_url = csdn_config.get('url', "https://blog.csdn.net/shrimpcolo?type=blog")
+            output_csv = csdn_config.get('output_csv', "scraper_output/csdn_articles_data.csv")
+    except Exception as e:
+        print(f"Failed to load config.json: {e}. Using defaults.")
+        target_url = "https://blog.csdn.net/shrimpcolo?type=blog"
+        output_csv = "scraper_output/csdn_articles_data.csv"
+
+    scraper = CSDNScraper(target_url, output_csv)
     asyncio.run(scraper.run())
     scraper.save_csv()

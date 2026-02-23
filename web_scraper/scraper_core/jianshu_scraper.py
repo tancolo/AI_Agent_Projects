@@ -5,8 +5,9 @@ from playwright.async_api import async_playwright
 from bs4 import BeautifulSoup
 
 class JianshuScraper:
-    def __init__(self, target_url):
+    def __init__(self, target_url, output_csv="jianshu_articles_data.csv"):
         self.target_url = target_url
+        self.output_csv = output_csv
         self.articles = []
 
     async def load_all_articles(self, page):
@@ -76,7 +77,7 @@ class JianshuScraper:
             page = await context.new_page()
 
             print(f"Navigating to {self.target_url}")
-            await page.goto(self.target_url)
+            await page.goto(self.target_url, timeout=60000)
             
             # Load all
             await self.load_all_articles(page)
@@ -192,12 +193,28 @@ class JianshuScraper:
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
             
-        output_path = os.path.join(output_dir, 'jianshu_articles_data.csv')
+        output_path = os.path.join(output_dir, os.path.basename(self.output_csv))
         df.to_csv(output_path, index=False)
         print(f"Data saved to {output_path}")
 
 if __name__ == "__main__":
-    # User ID: d614825bc8a1
-    scraper = JianshuScraper("https://www.jianshu.com/u/d614825bc8a1")
+    import json
+    import os
+    
+    # Load config from root directory
+    config_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'config.json')
+    try:
+        with open(config_path, 'r', encoding='utf-8') as f:
+            config = json.load(f)
+            jianshu_config = config.get('platforms', {}).get('jianshu', {})
+            
+            target_url = jianshu_config.get('url', "https://www.jianshu.com/u/d614825bc8a1")
+            output_csv = jianshu_config.get('output_csv', "scraper_output/jianshu_articles_data.csv")
+    except Exception as e:
+        print(f"Failed to load config.json: {e}. Using defaults.")
+        target_url = "https://www.jianshu.com/u/d614825bc8a1"
+        output_csv = "scraper_output/jianshu_articles_data.csv"
+
+    scraper = JianshuScraper(target_url, output_csv)
     asyncio.run(scraper.run())
     scraper.save_csv()

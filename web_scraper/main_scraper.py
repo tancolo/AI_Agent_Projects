@@ -2,6 +2,7 @@ import subprocess
 import sys
 import time
 import os
+import json
 
 def run_script(script_name, description):
     print(f"\n{'='*50}")
@@ -41,22 +42,41 @@ def run_script(script_name, description):
         return False
 
 def main():
-    print("Starting Web Scraper V0.2 Pipeline...")
+    print("Starting Web Scraper V0.3 Pipeline...")
     
-    # Step 1: Scrape CSDN
-    if not run_script(os.path.join("scraper_core", "csdn_scraper.py"), "Scraping CSDN Blog"):
-        print("Pipeline aborted due to CSDN scraper failure.")
+    # Load Configuration
+    config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config.json')
+    try:
+        with open(config_path, 'r', encoding='utf-8') as f:
+            config = json.load(f)
+            platforms = config.get('platforms', {})
+    except Exception as e:
+        print(f"Failed to load config.json: {e}")
         return
+
+    # Step 1: Scrape CSDN
+    if platforms.get('csdn', {}).get('enabled', False):
+        if not run_script(os.path.join("scraper_core", "csdn_scraper.py"), "Scraping CSDN Blog"):
+            print("Pipeline aborted due to CSDN scraper failure.")
+            return
+    else:
+        print("\nSkipping CSDN: Disabled in config.json")
 
     # Step 2: Scrape Jianshu
-    if not run_script(os.path.join("scraper_core", "jianshu_scraper.py"), "Scraping Jianshu Blog"):
-        print("Pipeline aborted due to Jianshu scraper failure.")
-        return
+    if platforms.get('jianshu', {}).get('enabled', False):
+        if not run_script(os.path.join("scraper_core", "jianshu_scraper.py"), "Scraping Jianshu Blog"):
+            print("Pipeline aborted due to Jianshu scraper failure.")
+            return
+    else:
+        print("\nSkipping Jianshu: Disabled in config.json")
 
     # Step 3: Scrape Juejin
-    if not run_script(os.path.join("scraper_core", "juejin_scraper.py"), "Scraping Juejin Blog"):
-        print("Pipeline aborted due to Juejin scraper failure.")
-        return
+    if platforms.get('juejin', {}).get('enabled', False):
+        if not run_script(os.path.join("scraper_core", "juejin_scraper.py"), "Scraping Juejin Blog"):
+            print("Pipeline aborted due to Juejin scraper failure.")
+            return
+    else:
+        print("\nSkipping Juejin: Disabled in config.json")
 
     # Step 4: Merge Data
     if not run_script(os.path.join("scraper_core", "merge_articles_data.py"), "Merging, Deduplicating, Translating, and Sorting Data"):
@@ -69,7 +89,7 @@ def main():
         return
 
     print("\n" + "*"*50)
-    print("Web Scraper V0.2 Pipeline Completed Successfully!")
+    print("Web Scraper V0.3 Pipeline Completed Successfully!")
     print("Output file: scraper_output/final_articles_report.md")
     print("*"*50)
 
