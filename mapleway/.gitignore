@@ -4,6 +4,7 @@ logo_selection/
 PRD/
 screenshots/
 mayple_extension_CR/
+dist/MapleWay_Beta_v0.1/
 
 # Python environment
 __pycache__/
