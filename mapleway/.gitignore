@@ -5,6 +5,7 @@ PRD/
 screenshots/
 mayple_extension_CR/
 dist/MapleWay_Beta_v0.1/
+media_scripts/
 
 # Python environment
 __pycache__/
