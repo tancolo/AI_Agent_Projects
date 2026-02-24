@@ -8,7 +8,7 @@
 **MapleWay** is a professional browser extension designed for immigration applicants to the **Alberta Advantage Immigration Program (AAIP)**. It automates the extraction and analysis of complex processing data from the official Alberta government website, providing a clear and organized view of nomination quotas, draw history, and pool statistics.
 
 <video width="640" height="360" controls>
-  <source src="../assets/demo_for_Mapleway.mp4" type="video/mp4">
+  <source src="https://github.com/tancolo/AI_Agent_Projects/raw/main/assets/demo_for_Mapleway.mp4" type="video/mp4">
   Your browser does not support the HTML5 video tag.
 </video>
 
