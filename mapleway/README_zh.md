@@ -7,10 +7,10 @@
 
 **MapleWay** 是一款为 **阿尔伯塔省优势移民计划 (AAIP)** 申请人量身定制的专业浏览器插件。它能够自动从阿尔伯塔省政府官网抓取并分析复杂的处理数据，为您提供关于提名配额、抽签历史和候选池统计的清晰、有条理的视图。
 
-<video width="640" height="360" controls>
-  <source src="https://github.com/tancolo/AI_Agent_Projects/raw/main/assets/demo_for_Mapleway.mp4" type="video/mp4">
-  您的浏览器不支持 HTML5 视频标签。
-</video>
+### 🎥 演示视频
+![MapleWay 演示](https://github.com/tancolo/AI_Agent_Projects/raw/main/assets/demo_for_Mapleway.mp4)
+
+> 💡 **提示**：如果上方视频无法播放，您可以 [直接点击此处查看/下载](https://github.com/tancolo/AI_Agent_Projects/raw/main/assets/demo_for_Mapleway.mp4)。
 
 ---
 
