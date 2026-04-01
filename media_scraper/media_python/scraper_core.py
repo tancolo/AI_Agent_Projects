@@ -76,7 +76,8 @@ class MediaScraper:
                 capture_output=True,
                 text=True,
                 timeout=60,
-                encoding="utf-8"
+                encoding="utf-8",
+                errors="replace"
             )
             
             videos = []
@@ -155,6 +156,10 @@ class MediaScraper:
             "--progress"
         ])
         
+        # Automatically use cookies if the file exists
+        if Path("cookies.txt").exists():
+            cmd.extend(["--cookies", "cookies.txt"])
+        
         cmd.extend(self._get_ffmpeg_args())
         cmd.append(video_url)
         
@@ -164,15 +169,18 @@ class MediaScraper:
                 capture_output=True,
                 text=True,
                 timeout=600, # 10 minutes
-                encoding="utf-8"
+                encoding="utf-8",
+                errors="replace"
             )
             
             if result.returncode == 0:
-                log_message(f"Successfully downloaded: {title}", "SUCCESS", self.log_file)
+                success_msg = f"Successfully downloaded: {title if title else video_url}"
+                log_message(success_msg, "SUCCESS", self.log_file)
                 return True
             else:
                 error_msg = result.stderr.strip() if result.stderr else "Unknown error"
-                log_message(f"Download failed for {title}: {error_msg}", "WARNING", self.log_file)
+                log_msg = f"Download failed for {title if title else video_url}: {error_msg}"
+                log_message(log_msg, "WARNING", self.log_file)
                 return False
                 
         except Exception as e:

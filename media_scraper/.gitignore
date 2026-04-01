@@ -26,3 +26,8 @@ media_python/__pycache__/
 # OS generated files
 .DS_Store
 Thumbs.db
+
+# Project-specific ignores
+bilibili/
+cookies.txt
+
