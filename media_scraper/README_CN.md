@@ -61,6 +61,15 @@ python media_archiver.py URL1 URL2 URL3
 python media_archiver.py --list my_urls.txt
 ```
 
+直接通过命令行动态指定格式与画质 (覆盖 .ini 配置):
+```powershell
+python media_archiver.py https://... --type audio --format mp3 --quality 0
+# 可选参数范围:
+# --type [audio|video]
+# --format [mp4|mp3|webm|m4a|...]
+# --quality [1080|720|0|320K|...]
+```
+
 ### 输出位置
 - **配置模式**: `./downloads/{歌手}/`
 - **直接模式**: `./downloads/Direct_Downloads/`

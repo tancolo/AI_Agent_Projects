@@ -58,6 +58,15 @@ Download from a text file (one URL per line):
 python media_archiver.py --list my_urls.txt
 ```
 
+Override parameters dynamically for direct URLs or lists:
+```powershell
+python media_archiver.py https://www.youtube.com/watch?v=... --type audio --format mp3 --quality 0
+# Options:
+# --type [audio|video]
+# --format [mp4|mp3|webm|m4a|...]
+# --quality [1080|720|0|320K|...]
+```
+
 ### Output Locations
 - **Config Mode**: `./downloads/{Artist}/`
 - **Direct Mode**: `./downloads/Direct_Downloads/`

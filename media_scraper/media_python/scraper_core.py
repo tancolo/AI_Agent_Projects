@@ -164,9 +164,11 @@ class MediaScraper:
         cmd.append(video_url)
         
         try:
+            # Capture only stderr so that stdout streams directly to the console (showing progress)
             result = subprocess.run(
                 cmd,
-                capture_output=True,
+                stdout=None,
+                stderr=subprocess.PIPE,
                 text=True,
                 timeout=600, # 10 minutes
                 encoding="utf-8",
@@ -220,9 +222,9 @@ class MediaScraper:
                     if not success:
                         self.append_to_links_file(links_file, video["title"], url, "Download restricted or failed")
 
-    def download_direct(self, url: str) -> bool:
+    def download_direct(self, url: str, media_type: str = None, fmt: str = None, quality: str = None) -> bool:
         """
-        Download a single URL directly using general config settings.
+        Download a single URL directly using general config settings or provided overrides.
         Used for ad-hoc downloads via CLI.
         """
         log_message(f"Direct download requested: {url}", "INFO", self.log_file)
@@ -234,11 +236,11 @@ class MediaScraper:
         # Initialize links file for direct downloads
         links_file = self.initialize_links_file("Direct_Downloads")
         
-        # Create a temporary "artist config" using general settings
+        # Create a temporary "artist config" using general settings or overrides
         temp_config = {
-            "media_type": self.general_config.get("media_type", "audio"),
-            "format": self.general_config.get("format", "webm"),
-            "quality": self.general_config.get("quality", "best")
+            "media_type": media_type or self.general_config.get("media_type", "audio"),
+            "format": fmt or self.general_config.get("format", "webm"),
+            "quality": str(quality) if quality else self.general_config.get("quality", "best")
         }
         
         # Pass None as title to enable auto-titling from yt-dlp metadata

@@ -53,6 +53,10 @@ Examples:
         help='Path to a text file containing URLs (one per line)'
     )
     
+    parser.add_argument('--type', choices=['audio', 'video'], help='Override media type (audio or video)')
+    parser.add_argument('--format', type=str, help='Override output format (e.g., mp3, mp4, webm)')
+    parser.add_argument('--quality', type=str, help='Override quality (e.g., 1080, 720, 0, 320K)')
+    
     args = parser.parse_args()
     
     try:
@@ -90,7 +94,7 @@ Examples:
             success_count = 0
             
             for url in direct_urls:
-                if scraper.download_direct(url):
+                if scraper.download_direct(url, media_type=args.type, fmt=args.format, quality=args.quality):
                     success_count += 1
             
             log_message(f"Direct downloads completed: {success_count}/{len(direct_urls)} successful", "SUCCESS")
