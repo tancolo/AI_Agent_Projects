@@ -170,7 +170,7 @@ class MediaScraper:
                 stdout=None,
                 stderr=subprocess.PIPE,
                 text=True,
-                timeout=600, # 10 minutes
+                timeout=None, # Allow unlimited time for large downloads
                 encoding="utf-8",
                 errors="replace"
             )

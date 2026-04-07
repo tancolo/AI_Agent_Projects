@@ -127,3 +127,13 @@
 - **Reason:** Direct download failed
 - **Added:** 2026-03-31 23:06:36
 
+### watch?v=7D8-tEZsQEs
+- **URL:** [https://www.youtube.com/watch?v=7D8-tEZsQEs](https://www.youtube.com/watch?v=7D8-tEZsQEs)
+- **Reason:** Direct download failed
+- **Added:** 2026-04-06 23:02:41
+
+### direct_download
+- **URL:** [https://www.bilibili.com/video/BV1AKwUzhEwK/](https://www.bilibili.com/video/BV1AKwUzhEwK/)
+- **Reason:** Direct download failed
+- **Added:** 2026-04-06 23:05:16
+
