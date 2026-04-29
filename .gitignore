@@ -19,3 +19,8 @@ media_python/__pycache__/
 # OS generated files
 .DS_Store
 Thumbs.db
+
+# Hai Job
+hai_job/bugs/
+hai_job/PRD/
+hai_job/node_modules/
