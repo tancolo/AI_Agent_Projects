@@ -29,6 +29,7 @@ Welcome to **AI Agent Projects**! This repository is a curated collection of int
 | **[Web Scraper](./web_scraper)** | Multi-platform technical article aggregator (CSDN, Jianshu, Juejin) with auto-translation and Markdown report generation. | Python, Playwright, BS4 |
 | **[MapleWay](./mapleway)** | Intelligent immigration data analysis extension, automating data extraction from government portals. | JavaScript, Chrome Extension |
 | **[Media Scraper](./media_scraper)** | Robust media content archiving and download tool with multi-platform support. | Python, Requests, CLI |
+| **[Hai Job](./hai_job)** | A smart Chrome extension for job seekers to effortlessly scrape, track, and manage job applications across multiple platforms with full i18n support and local CSV export/import capabilities. | JavaScript, HTML/CSS, Chrome Extension |
 
 ## 🛠️ Tech Ecosystem
 
@@ -45,7 +46,7 @@ Welcome to **AI Agent Projects**! This repository is a curated collection of int
 Each project has its own dedicated documentation. Please navigate to the specific directory for installation and usage instructions.
 
 1.  **Clone**: `git clone https://github.com/tancolo/AI_Agent_Projects.git`
-2.  **Explore**: Navigate to `web_scraper`, `mapleway`, or `media_scraper`.
+2.  **Explore**: Navigate to `web_scraper`, `mapleway`, `media_scraper`, or `hai_job`.
 3.  **Read**: Check the `README.md` or `README_CN.md` within each folder.
 
 ## 🤝 Contributing

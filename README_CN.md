@@ -29,6 +29,7 @@
 | **[Web Scraper](./web_scraper)** | 多平台技术文章聚合器，支持 CSDN、简书、掘金，具备自动翻译与 Markdown 报告生成功能。 | Python, Playwright, BS4 |
 | **[MapleWay](./mapleway)** | 智能移民数据分析插件，自动化提取政府官网项目数据并生成对比分析。 | JavaScript, Chrome Extension |
 | **[Media Scraper](./media_scraper)** | 稳健的媒体内容归档与下载工具，支持自定义配置与多平台适配。 | Python, Requests, CLI |
+| **[Hai Job](./hai_job)** | 一款专为求职者打造的智能 Chrome 扩展，支持一键提取多平台职位信息、全本地化求职记录追踪管理，并内置 CSV 数据的双向导入导出与全面的国际化（i18n）支持。 | JavaScript, HTML/CSS, Chrome Extension |
 
 ## 🛠️ 技术生态
 
@@ -45,7 +46,7 @@
 每个子项目都有其独立的说明文档。请进入对应目录查看详细的安装与使用指南。
 
 1.  **克隆仓库**: `git clone https://github.com/tancolo/AI_Agent_Projects.git`
-2.  **选择项目**: 进入 `web_scraper`, `mapleway`, 或 `media_scraper`.
+2.  **选择项目**: 进入 `web_scraper`, `mapleway`, `media_scraper`, 或 `hai_job`.
 3.  **阅读指南**: 查看各文件夹下的 `README.md` 或 `README_CN.md`。
 
 ## 🤝 贡献指南
