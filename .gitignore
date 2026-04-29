@@ -3,6 +3,7 @@ Test_whisper_real_time/
 Agentic_Coding/
 find_a_doctor/
 RidePilot/
+Android_Architecture_md/
 
 # Python environment
 __pycache__/
@@ -20,7 +21,3 @@ media_python/__pycache__/
 .DS_Store
 Thumbs.db
 
-# Hai Job
-hai_job/bugs/
-hai_job/PRD/
-hai_job/node_modules/
