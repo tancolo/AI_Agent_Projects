@@ -137,3 +137,13 @@
 - **Reason:** Direct download failed
 - **Added:** 2026-04-06 23:05:16
 
+### watch?v=67dqkyZXwd4
+- **URL:** [https://www.youtube.com/watch?v=67dqkyZXwd4](https://www.youtube.com/watch?v=67dqkyZXwd4)
+- **Reason:** Direct download failed
+- **Added:** 2026-08-26 00:25:24
+
+### watch?v=Jj1_mfUzjOs
+- **URL:** [https://www.youtube.com/watch?v=Jj1_mfUzjOs](https://www.youtube.com/watch?v=Jj1_mfUzjOs)
+- **Reason:** Direct download failed
+- **Added:** 2026-08-26 00:27:03
+
