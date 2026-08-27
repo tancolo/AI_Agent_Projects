@@ -20,6 +20,11 @@ from media_python.scraper_core import MediaScraper
 from media_python.utils import log_message
 
 def main():
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8')
+    if hasattr(sys.stderr, 'reconfigure'):
+        sys.stderr.reconfigure(encoding='utf-8')
+
     print("""
     ╔═══════════════════════════════════════════════════════════════╗
     ║                 MEDIA SCRAPER ARCHIVER V0.3                   ║
