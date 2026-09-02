@@ -25,8 +25,9 @@
 
 ### 环境准备
 ```powershell
-# 安装核心依赖
-pip install yt-dlp
+# 创建虚拟环境并安装核心依赖
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
 # 安装 ffmpeg (媒体转换必备)
 winget install --id Gyan.FFmpeg
 ```
@@ -42,28 +43,28 @@ quality = 1080p
 
 运行:
 ```powershell
-python media_archiver.py
+.\.venv\Scripts\python.exe media_archiver.py
 ```
 
 ### 直接URL模式 (V0.3 新功能!)
 下载单个URL:
 ```powershell
-python media_archiver.py https://www.youtube.com/watch?v=...
+.\.venv\Scripts\python.exe media_archiver.py https://www.youtube.com/watch?v=...
 ```
 
 下载多个URL:
 ```powershell
-python media_archiver.py URL1 URL2 URL3
+.\.venv\Scripts\python.exe media_archiver.py URL1 URL2 URL3
 ```
 
 从文本文件批量下载 (每行一个URL):
 ```powershell
-python media_archiver.py --list my_urls.txt
+.\.venv\Scripts\python.exe media_archiver.py --list my_urls.txt
 ```
 
 直接通过命令行动态指定格式与画质 (覆盖 .ini 配置):
 ```powershell
-python media_archiver.py https://... --type audio --format mp3 --quality 0
+.\.venv\Scripts\python.exe media_archiver.py https://... --type audio --format mp3 --quality 0
 # 可选参数范围:
 # --type [audio|video]
 # --format [mp4|mp3|webm|m4a|...]

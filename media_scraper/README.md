@@ -24,7 +24,8 @@ This project is an automated media archiving tool created for educational and re
 
 ### Prerequisites
 ```powershell
-pip install yt-dlp
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
 winget install --id Gyan.FFmpeg
 ```
 
@@ -39,28 +40,28 @@ quality = 1080p
 
 Run:
 ```powershell
-python media_archiver.py
+.\.venv\Scripts\python.exe media_archiver.py
 ```
 
 ### Direct URL Mode (V0.3 New!)
 Download a single URL:
 ```powershell
-python media_archiver.py https://www.youtube.com/watch?v=...
+.\.venv\Scripts\python.exe media_archiver.py https://www.youtube.com/watch?v=...
 ```
 
 Download multiple URLs:
 ```powershell
-python media_archiver.py URL1 URL2 URL3
+.\.venv\Scripts\python.exe media_archiver.py URL1 URL2 URL3
 ```
 
 Download from a text file (one URL per line):
 ```powershell
-python media_archiver.py --list my_urls.txt
+.\.venv\Scripts\python.exe media_archiver.py --list my_urls.txt
 ```
 
 Override parameters dynamically for direct URLs or lists:
 ```powershell
-python media_archiver.py https://www.youtube.com/watch?v=... --type audio --format mp3 --quality 0
+.\.venv\Scripts\python.exe media_archiver.py https://www.youtube.com/watch?v=... --type audio --format mp3 --quality 0
 # Options:
 # --type [audio|video]
 # --format [mp4|mp3|webm|m4a|...]
