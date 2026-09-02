@@ -147,3 +147,8 @@
 - **Reason:** Direct download failed
 - **Added:** 2026-08-26 00:27:03
 
+### watch?v=KPK23K7ipVo
+- **URL:** [https://www.youtube.com/watch?v=KPK23K7ipVo](https://www.youtube.com/watch?v=KPK23K7ipVo)
+- **Reason:** Direct download failed
+- **Added:** 2026-09-01 23:52:41
+
